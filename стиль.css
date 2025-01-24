@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F5F0D4;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.fixed-header {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    background-color: rgba(245, 240, 212, 0.9); 
+    padding: 10px 0; 
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+    min-height: 50px;
+}
+
+/* Добавляем отступ сверху для содержимого, чтобы оно не было скрыто фиксированным заголовком */
+.container {
+    display: grid; /* Определяем этот элемент как grid-контейнер */
+    grid-gap: 20px; /* Расстояние между элементами сетки */
+    padding: 20px; /* Отступы внутри контейнера */
+    max-width: 800px; /* Ограничиваем максимальную ширину контейнера */
+    margin: 70px auto 0 auto; /* Центрируем контейнер с учетом фиксированного заголовка */
+}
+
+.flex-wrapper {
+    display: grid; /* Определяем элемент как grid-контейнер для дочерних элементов */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Сетка с минимальной шириной ячеек 250px */
+    grid-gap: 15px; /* Расстояние между ячейками сетки */
+}
+
+.instructions {
+    grid-column: span 2; /* Занимает две колонки в родительском гриде */
+}
+
+.img {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #5D3A29;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #B39265;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #A4522D;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+ul {
+    color: rgb(108, 83, 43);
+    font-size: 1rem;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+a {
+    color: #A67B55;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #7B4B2A;
+}
+
+figcaption {
+    text-align: center;
+    color: #5D3A29;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Фоновый цвет для ячеек */
+    border-radius: 10px; /* Скругленные углы для ячеек */
+    padding: 15px; /* Внутренние отступы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для ячеек */
+} 
